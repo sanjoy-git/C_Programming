@@ -1,0 +1,248 @@
+///::::::::::::Text:::::::::::
+
+Programiz:
+----------INTRODUCTION-------------
+
+** Keywords & Identifier
+** Variables & Constants
+** C Data Types
+** C Input/Output
+** C Operators
+** Basic Examples
+
+
+* C is a powerful general-purpose programming language. structure programming language. It is fast, portable and available in all platforms.
+
+* C is a case sensitive language .
+
+* C Keywords : Keywords are predefined, reserved words used in programming.
+
+* stdio.h is a header file 
+
+* #include,#define is preprocessor directive 
+
+* C Preprocessor and Macros  
+
+* Predefined Macros : __DATE__ , __FILE__ , __LINE__ , __STDC__ , __TIME__ .
+
+* conditional  directives : #ifdef, #if, #defined, #else and #elseif
+
+* #define PI 3.14 * const double PI = 3.14; 
+
+* #include<stdio.h> //eta sorasori shudu install file e khoje.
+
+* #include"stdio.h" //eta prothome sorce file e khoje tar por install file e khoje.
+
+* C identifiers is a any identity name. such as variable name.
+
+* scanf("%d",&n);	// keyboard theke data read kore veriable location e rakhe
+* printf("%d",n);	// 
+
+* Format specifier  %d,%c,%f,%lf,etc..
+
+* & memory location niddes kore.
+
+* %.3f use after the point 3 digit print.
+
+* Derived Data Types: arrays, pointers, function types, structures, etc.
+
+* Special Characters: , < > . _ ( ) etc.
+
+* Escape Sequences: \b,\f,\n,,\r,\t,\v,\\,\',\",\?,\0.
+
+* printf("Area=%.2f",area);
+
+* statement;		// general line
+
+* int i;
+
+* printf("%d",sizeof(i));	// sizeof(i); / sizeof(int);
+
+* Basic data types int,char,float,double,etc..
+
+* Other data types : bool type, enumerated type, complex type.
+
+* Derived Data Types : arrays, pointers, function types, structures, etc.
+
+* Type Conversion : int i= (int)j;
+
+* return 0; function e vaule return koranor jonno bebhoher kora hoy.
+
+* void is not return type. you cannot create variables of void type. If a function is not returning anything, its return type should be void. 
+
+* unsigned data type positive value niye kaj kore. Ex- unsigned int, etc..
+* signed data type positive and negative value niye kaj kore. Ex-Default.
+
+* C Assignment Operators holo: a+=10 or a=a+10;
+
+* Bitwise: & | ^ - << >>
+* ternary operator ?:		// (n%2==0)? printf(""):printf("");
+* reference operator: &		// use of location detect
+* dereference operator: *	// ues of pointer
+* member selection operator -> 
+
+
+* Arithmetic Operators : +  -  *  /  %
+* Assignment Operators : =  +=  -=  *=  /=  %=
+* Relational Operators : ==  >  <  !=  >=  <=
+* Logical Operators : &&  ||  !
+* Bitwise Operators : &  |  ^  ~  <<  >> 		a=b&c;
+
+
+* Algorithm		// program er likheto rup
+* Flowcharts		//Symbols Used In Flowchart
+* Pseudocode
+* Implementation	// code e rupantor
+* Syntax		// for example : if..else if..else er syntax.
+* source code
+
+ int i;
+ i=getchar();
+ putchar(i);
+
+
+-----------FLOW CONTROL------------
+
+** if...else if...else
+** for loop			// for(i=0;name[i]!='\0';++i);  // body na use korle
+** while loop
+** do while loop
+** break and continue
+** switch
+** Decision Examples
+
+
+
+-----------Function:-------------
+
+** Functions Introduction
+** User-defined Function
+** Function Types
+** Recursion in C		// function calls itself
+** Variable Scope		// veriable er life time , 
+** Function Examples
+
+
+
+* user-defined and standard library functions / built in function.
+
+* If you want to use the built in function , the header file should be included.
+	
+
+* There are 4 types of storage class:		//variable scope
+	1.automatic     // it is a default and local.
+	2.external	// it is a global variable.
+	3.static	// function theke ber holeo variable a data theke jay.
+	4.register	// sorasori register e data rakhe.
+
+
+returnType functionName(type1 argument1, type2 argument2, ...);		// Prototype
+Calling function		//je function theke call kora hobe
+Called function definition
+return statement
+
+---------------ARRAYS------------
+
+** C Arrays Introduction
+** Multidimensional Array
+** Arrays & Functions
+** Strings in C			//char name[30]; int number[5];
+** String Functions
+** Array Examples
+
+* one-dimensional , (two-dimensional , three-dimensional...) / Multidimensional array.
+
+* Array indices start 0 theke.
+
+* declare an array :
+
+
+* int mark[3]={1,5,6,7,8}; // mark[0]=12;
+* int mark[row][column]; int mark[2][3]={{0,1,2},{0,1,2}};
+
+* scanf("%s",&name);
+* scanf("%s",name);  gets(name);  fgets(name, sizeof(name), stdin);     // string for input
+* printf("%s",name);  puts(name);  fputs(name,stdout);			// string for Output
+
+
+* char ch[] = {'a', 'b', 'c', 'd', '\0'};	// null character '\0'
+  scanf("%c",ch[1]); printf("%s",ch);
+
+* C String library function : strlen() , strcpy() , ...
+
+scanf("%d",number);	 scanf("%d",number+1);
+scanf("%d",&number[0]);  scanf("%d",&number[1]);
+printf("%d",*number); 	 printf("%d",*(number+1));
+printf("%d",number[0]);  printf("%d",number[1]);
+
+-------C POINTERS----------
+
+** C Pointers		//Datar address nie kaj kore.
+** Pointers & Arrays
+** Pointers & Functions
+** Memory Management	//C Dynamic Memory Allocation
+** Pointer Examples
+
+Pointer Syntax : int* p;	//dereference operator: *
+
+printf("Address of c: %p", &c);
+
+standard library functions: malloc(), calloc(), realloc() and free().	//C Dynamic Memory Allocation.   #include<stdlib.h>
+
+ptr = (castType*) malloc(size);
+
+ptr = (struct person*) malloc(n * sizeof(struct person)); // person is a struct name. no struct veriable.
+
+int *ptr;
+ptr = (int*) malloc(n * sizeof(float));		// size of e je kono type deoa jabe.
+ptr = (float*) calloc(n, sizeof(float));
+ptr = realloc(ptr, n1 * sizeof(int));
+free(ptr);
+
+scanf("%d", ptr + i);
+printf("%d\n",*(ptr+i));
+
+
+
+--------------STRUCTURE & FILE------------
+** C Structure
+** Structure & Pointers
+** Structure & Functions
+** C Unions
+** Structure Examples
+** Files Handling
+
+Keyword typedef	    // global struct variable use kore local struct veriable create kora jay.
+Nested Structures   // ekta struct ke ar ekta struct er vitor use.
+
+  . - Member operator
+  -> - Structure pointer operator
+
+personPtr->age is equivalent to (*personPtr).age
+personPtr->weight is equivalent to (*personPtr).weight
+
+Types of Files:
+	1. Text files		// .txt
+	2. Binary files		// .bin
+
+#include<stdio.h>
+
+FILE *fptr;
+ptr = fopen("E:\\cprogram\\newprogram.txt","r+");	// file open korbe
+
+fprintf(fptr,"%s",strname);			// file e write korbe
+fscanf(fptr,"%s",strname);			// file theke read korbe
+
+fwrite(&num, sizeof(struct threeNum), 1, fptr); // file e write korbe
+fread(&num, sizeof(struct threeNum), 1, fptr);  // file theke read korbe
+
+fputs(	
+
+fclose(fptr);					// file close korbe
+
+exit(1);	//program theke ber hoye jaoa.
+
+while(! feof(fptr))	// end of file chaeck
+
+
+
